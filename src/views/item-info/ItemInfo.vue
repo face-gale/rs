@@ -85,6 +85,7 @@ import { recommend } from "../../api";
 // import YButton from "../../../components/YButton";
 import YShelf from "../../components/shelf";
 import mallGoods from "../../components/mallGoods";
+import {getAllGoods} from "../../api/goods";
 
 export default {
   data() {
@@ -93,7 +94,7 @@ export default {
         {
           productId: 150642571432852,
           salePrice: 499.0,
-          productName: "FIIL Driifter 脖挂蓝牙耳机",
+          productName: "FIIL Driifter 脖挂蓝牙耳机3.0",
           subTitle: "全天佩戴 抬手就听 HEAC稳连技术",
           productImageBig:
             "https://resource.smartisan.com/resource/367d93db1d58f9f3505bc0ec18efaa44.jpg"
@@ -268,6 +269,33 @@ export default {
     };
   },
   methods: {
+    _getAllGoods () {
+      let params = {
+        params: {
+          // page: this.currentPage,
+          // size: this.pageSize,
+          // sort: this.sort,
+          // priceGt: this.min,
+          // priceLte: this.max,
+          // cid: cid
+        }
+      }
+      getAllGoods(params).then(res => {
+        if (res.success === true) {
+          // this.total = res.data.total
+          this.goods = res.data.data
+          this.noResult = false
+          if (this.total === 0) {
+            this.noResult = true
+          }
+          this.error = false
+        } else {
+          this.error = true
+        }
+        this.loading = false
+      })
+    }
+
     /*handleSizeChange(val) {
       this.pageSize = val;
       this._getAllGoods();
@@ -336,13 +364,15 @@ export default {
     //   }
     // }
   },
-  created() {},
+  created() {
+    this._getAllGoods();
+  },
   mounted() {
     this.windowHeight = window.innerHeight;
     this.windowWidth = window.innerWidth;
     // this._getAllGoods()
     recommend().then(res => {
-      let data = res.result;
+      let data = res.data;
       this.recommendPanel = data[0];
     });
   },

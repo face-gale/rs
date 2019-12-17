@@ -9,11 +9,9 @@ Vue.use(VueLazyLoad, {
   error: "./static/error.png"
   // loading:'./static/loading.png'
 });
+require('./mock/index')
 import Element from "element-ui";
 Vue.use(Element);
-// 向main.js中添加如下代码
-process.env.Mock && require('./mock.js')
-
 new Vue({
   router,
   store,
