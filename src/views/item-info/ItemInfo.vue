@@ -28,6 +28,16 @@
             :msg="item"
           ></mall-goods>
         </div>
+        <!--<el-pagination
+                v-if="!noResult&&!error"
+                @size-change="handleSizeChange"
+                @current-change="handleCurrentChange"
+                :current-page="currentPage"
+                :page-sizes="[8, 20, 40, 80]"
+                :page-size="pageSize"
+                layout="total, sizes, prev, pager, next, jumper"
+                :total="total">
+        </el-pagination>-->
       </div>
       <div class="no-info" v-if="noResult">
         <div class="no-data">

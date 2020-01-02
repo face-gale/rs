@@ -109,13 +109,13 @@ export default {
     },
     play() {
       // 每2.5s自动切换
-      this.timer = setInterval(this.autoPlay, 2500);
+      this.timer = setInterval(this.autoPlay, 3000);
     },
     change(i) {
       this.mark = i;
     },
     startTimer() {
-      this.timer = setInterval(this.autoPlay, 2500);
+      this.timer = setInterval(this.autoPlay, 3000);
     },
     stopTimer() {
       clearInterval(this.timer);
@@ -237,7 +237,7 @@ export default {
       display: inline-block;
       width: 15px;
       height: 15px;
-      background-color: whitesmoke;
+      background-color: #68696d;
       border-radius: 8px;
       margin-right: 10px;
       cursor: pointer;

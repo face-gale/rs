@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <div id="footerA" class="footer">
     <div class="container">
       <div class="siteinfo">
         <ul class="c0">
@@ -7,7 +7,7 @@
           <ul>
             <li class="c2">
               <!--              <router-link to="/thanks">-->
-              <a class="c3">产品指南</a>
+              <a class="c3" @click="open6">产品指南</a>
               <!--              </router-link></li>-->
             </li>
 
@@ -77,7 +77,7 @@
           <li class="tel">
             <a
               class="c5"
-              href="http://wpa.qq.com/msgrd?v=3&uin=1012139570&site=qq&menu=yes"
+              href="http://wpa.qq.com/msgrd?v=3&uin=123456789&site=qq&menu=yes"
               target="_blank"
               >123456789</a
             >
@@ -113,11 +113,11 @@
       <div class="cop">
         <a
           class="content-c3"
-          href="http://www.miibeian.gov.cn/"
+          href=""
           target="_blank"
         >
-          <span class="content-c3">蜀ICP备16030308号-1</span>
-          <span class="content-c3">蜀ICP证16030308号</span>
+          <span class="content-c3">蜀ICP备20200308号-1</span>
+          <span class="content-c3">蜀ICP证20200308号</span>
         </a>
       </div>
     </div>
@@ -151,7 +151,7 @@ export default {
       });
     },
     open4() {
-      this.$notify.info({
+      this.$notify({
         title: "产品渠道",
         message: "产品来自银河太阳系"
       });
@@ -160,6 +160,13 @@ export default {
       this.$notify({
         title: "产品声明",
         message: "产品仅供参考",
+        type: "warning"
+      });
+    },
+    open6() {
+      this.$notify({
+        title: "产品指南",
+        message: "任何指南都没有",
         type: "warning"
       });
     }
@@ -200,8 +207,9 @@ export default {
 
 .c1 {
   color: #646464;
+  font-weight: 700;
   font-size: 12px;
-  padding: 0 0 14px;
+  padding: 0 0 20px;
 }
 
 .c2 {
@@ -231,13 +239,13 @@ export default {
 
 .c5 {
   color: #646464;
-  right: -70px;
+  right: -90px;
   position: relative;
 }
 
 .time {
   margin-top: 5px;
-  right: -4px;
+  right: 5px;
   position: relative;
   clear: both;
   width: 241px;

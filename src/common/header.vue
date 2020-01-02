@@ -33,6 +33,9 @@
                 <li v-for="(item, i) in navList" :key="i">
                   <a @click="changGoods(i, item)" :class="{ active: i === choosePage }">{{ item.picUrl }}</a>
                 </li>
+                <li>
+                  <a @click="changGoods(-3)" :class="{ active: choosePage === -3 }">服务与支持</a>
+                </li>
               </ul>
               <div></div>
             </div>
@@ -79,6 +82,9 @@ export default {
         this.$router.push({
           path: "/item"
         });
+      } else if (v === -3) {
+        //使用document.querySelector实现锚点的效果
+        document.querySelector('#footerA').scrollIntoView(true);
       } else {
         // 站内跳转
         if (item.type === 1) {
