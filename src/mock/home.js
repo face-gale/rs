@@ -18,10 +18,10 @@ let item =
 export default {
 
     // 拦截ajax请求，配置mock的数据
-    'get|/goods/home': indexData,
-    'get|/goods/navList': indexInterface,
-    'get|/goods/recommend': commandData,
-    'get|/goods/allGoods': item
+    // 'get|/goods/home': indexData,
+    // 'get|/goods/navList': indexInterface,
+    // 'get|/goods/recommend': commandData,
+    // 'get|/goods/allGoods': item
 
 
 }

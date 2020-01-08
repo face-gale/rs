@@ -10,7 +10,7 @@ Vue.use(VueLazyLoad, {
   error: "./static/error.png"
   // loading:'./static/loading.png'
 });
-require('./mock/index')
+// require('./mock/index')
 import Element from "element-ui";
 Vue.use(Element);
 new Vue({

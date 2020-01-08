@@ -67,10 +67,10 @@
 </template>
 <script>
 import { mapMutations, mapState } from "vuex";
-// import {addCart, productDet} from "../../../api/goods";
 // import YButton from "../../../components/YButton";
 // import BuyNum from "../../../components/buynum";
 import YShelf from "../../components/shelf";
+import {productDet} from "../../api/goods";
 // import {getStore} from "../../../utils/storage";
 export default {
   data() {
@@ -90,38 +90,38 @@ export default {
   },
   methods: {
     ...mapMutations(["ADD_CART", "ADD_ANIMATION", "SHOW_CART"]),
-    // _productDet(productId) {
-    _productDet() {
-      let result = {
-        productId: 150642571432851,
-        salePrice: 2699.0,
-        productName: "优点智能 E1 推拉式智能指纹密码锁",
-        subTitle: "推拉一下，轻松开关",
-        limitNum: 100,
-        productImageBig:
-          "https://resource.smartisan.com/resource/7ac3af5a92ad791c2b38bfe1e38ee334.jpg",
-        detail:
-          '<img src="https://resource.smartisan.com/resource/a1f3fbf662376e8684e528f05721b286.jpg" style="width:1220px;height:14998px;" alt="" />',
-        productImageSmall: [
-          "https://resource.smartisan.com/resource/7ac3af5a92ad791c2b38bfe1e38ee334.jpg",
-          "https://resource.smartisan.com/resource/e37029b8cd3194ad9581de0ee6512acb.jpg",
-          "https://resource.smartisan.com/resource/1501eaf68c9771e5599eec45a5f6320a.jpg",
-          "https://resource.smartisan.com/resource/a8c6a41637041c576aaa2a5162d2ab56.jpg",
-          "https://resource.smartisan.com/resource/3934e0c458922c0049d311b84ddb73e0.jpg"
-        ]
-      };
-      this.product = result;
-      this.productMsg = result.detail || "";
-      this.small = result.productImageSmall;
-      this.big = this.small[0];
+    _productDet(productId) {
+    // _productDet() {
+    //   let result = {
+    //     productId: 150642571432851,
+    //     salePrice: 2699.0,
+    //     productName: "优点智能 E1 推拉式智能指纹密码锁",
+    //     subTitle: "推拉一下，轻松开关",
+    //     limitNum: 100,
+    //     productImageBig:
+    //       "https://resource.smartisan.com/resource/7ac3af5a92ad791c2b38bfe1e38ee334.jpg",
+    //     detail:
+    //       '<img src="https://resource.smartisan.com/resource/a1f3fbf662376e8684e528f05721b286.jpg" style="width:1220px;height:14998px;" alt="" />',
+    //     productImageSmall: [
+    //       "https://resource.smartisan.com/resource/7ac3af5a92ad791c2b38bfe1e38ee334.jpg",
+    //       "https://resource.smartisan.com/resource/e37029b8cd3194ad9581de0ee6512acb.jpg",
+    //       "https://resource.smartisan.com/resource/1501eaf68c9771e5599eec45a5f6320a.jpg",
+    //       "https://resource.smartisan.com/resource/a8c6a41637041c576aaa2a5162d2ab56.jpg",
+    //       "https://resource.smartisan.com/resource/3934e0c458922c0049d311b84ddb73e0.jpg"
+    //     ]
+    //   };
+    //   this.product = result;
+    //   this.productMsg = result.detail || "";
+    //   this.small = result.productImageSmall;
+    //   this.big = this.small[0];
 
-      // productDet({params: {productId}}).then(res => {
-      //   let result = res.result
-      //   this.product = result
-      //   this.productMsg = result.detail || ''
-      //   this.small = result.productImageSmall
-      //   this.big = this.small[0]
-      // })
+      productDet({params: {productId}}).then(res => {
+        let result = res.result
+        this.product = result
+        this.productMsg = result.detail || ''
+        this.small = result.productImageSmall
+        this.big = this.small[0]
+      })
     },
     // addCart (id, price, name, img) {
     //   if (!this.showMoveImg) {     // 动画是否在运动
