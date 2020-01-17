@@ -106,32 +106,32 @@ export default {
     };
   },
   methods: {
-    _getAllGoods () {
-      let params = {
-        params: {
-          // page: this.currentPage,
-          // size: this.pageSize,
-          // sort: this.sort,
-          // priceGt: this.min,
-          // priceLte: this.max,
-          // cid: cid
-        }
-      }
-      getAllGoods(params).then(res => {
-        if (res.success === true) {
-          this.total = res.result.total
-          this.goods = res.result.data
-          this.noResult = false
-          if (this.total === 0) {
-            this.noResult = true
-          }
-          this.error = false
-        } else {
-          this.error = true
-        }
-        this.loading = false
-      })
-    },
+    // _getAllGoods () {
+    //   let params = {
+    //     params: {
+    //       // page: this.currentPage,
+    //       // size: this.pageSize,
+    //       // sort: this.sort,
+    //       // priceGt: this.min,
+    //       // priceLte: this.max,
+    //       // cid: cid
+    //     }
+    //   }
+    //   getAllGoods(params).then(res => {
+    //     if (res.success === true) {
+    //       this.total = res.result.total
+    //       this.goods = res.result.data
+    //       this.noResult = false
+    //       if (this.total === 0) {
+    //         this.noResult = true
+    //       }
+    //       this.error = false
+    //     } else {
+    //       this.error = true
+    //     }
+    //     this.loading = false
+    //   })
+    // },
 
     handleSizeChange(val) {
       this.pageSize = val;
@@ -202,16 +202,16 @@ export default {
     }
   },
   created() {
-    this._getAllGoods();
+    // this._getAllGoods();
   },
   mounted() {
     this.windowHeight = window.innerHeight;
     this.windowWidth = window.innerWidth;
-    // this._getAllGoods()
-    recommend().then(res => {
-      let data = res.data;
-      this.recommendPanel = data[0];
-    });
+    this._getAllGoods()
+    // recommend().then(res => {
+    //   let data = res.result.data;
+    //   this.recommendPanel = data[0];
+    // });
   },
   components: {
     mallGoods,

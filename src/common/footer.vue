@@ -95,7 +95,7 @@
 
       <div class="copyright">
         <h4 class="content-c2">
-          Copyright ©2017, exrick.cn Co., Ltd. All Rights
+          Copyright ©2020, rsmarttech.com Co., Ltd. All Rights
           Reserved.本网站设计内容大部分属RS科技
         </h4>
         <ul class="privacy">
