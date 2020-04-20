@@ -12,11 +12,17 @@ module.exports = {
     proxy: {
       // changeOrigin:true,//允许跨域
         '/member/*': {
-            target: 'http://119.23.124.137:8081',  // 请求本地 需要xboot后台项目
+            target: 'http://manage.rsmarttech.com/',  // 请求本地 需要xboot后台项目
         },
         '/goods/*': {
-            target: 'http://119.23.124.137:8081'
+            target: 'http://manage.rsmarttech.com/'
         }
+      //   '/member/*': {
+      //       target: 'http://127.0.0.1:8080',  // 请求本地 需要xboot后台项目
+      //   },
+      //   '/goods/*': {
+      //       target: 'http://127.0.0.1:8080'
+      //   }
     }
   }
 

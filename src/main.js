@@ -4,6 +4,12 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 
+// 视频播放器
+import VideoPlayer from 'vue-video-player'
+require('video.js/dist/video-js.css')
+require('vue-video-player/src/custom-theme.css')
+Vue.use(VideoPlayer)
+
 Vue.config.productionTip = false;
 import VueLazyLoad from "vue-lazyload";
 Vue.use(VueLazyLoad, {

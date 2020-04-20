@@ -238,6 +238,7 @@ export default {
   .banner {
     width: 450px;
     margin-left: 10px;
+    margin-top: 100px;
     h4 {
       font-size: 24px;
       line-height: 1.25;
@@ -254,7 +255,7 @@ export default {
     }
     .sku-custom-title {
       overflow: hidden;
-      padding: 8px 8px 18px 10px;
+      padding: 8px 20px 18px 50px;
       position: relative;
     }
     .params-name {

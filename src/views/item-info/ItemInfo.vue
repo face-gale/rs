@@ -1,18 +1,18 @@
 <template>
   <div class="goods">
-    <!--    <div class="nav">-->
-    <!--      <div class="w">-->
-    <!--        <a href="javascript:;" :class="{active:sortType===1}" @click="reset()">综合排序</a>-->
-    <!--        <a href="javascript:;" @click="sortByPrice(1)" :class="{active:sortType===2}">价格从低到高</a>-->
-    <!--        <a href="javascript:;" @click="sortByPrice(-1)" :class="{active:sortType===3}">价格从高到低</a>-->
-    <!--        <div class="price-interval">-->
-    <!--          <input type="number" class="input" placeholder="价格" v-model="min">-->
-    <!--          <span style="margin: 0 5px"> - </span>-->
-    <!--          <input type="number" placeholder="价格" v-model="max">-->
-    <!--          <y-button text="确定" classStyle="main-btn" @btnClick="reset" style="margin-left: 10px;"></y-button>-->
-    <!--        </div>-->
-    <!--      </div>-->
-    <!--    </div>-->
+        <div class="nav">
+          <div class="w">
+<!--            <a href="javascript:;" :class="{active:sortType===1}" @click="reset()">综合排序</a>-->
+<!--            <a href="javascript:;" @click="sortByPrice(1)" :class="{active:sortType===2}">价格从低到高</a>-->
+<!--            <a href="javascript:;" @click="sortByPrice(-1)" :class="{active:sortType===3}">价格从高到低</a>-->
+<!--            <div class="price-interval">-->
+<!--              <input type="number" class="input" placeholder="价格" v-model="min">-->
+<!--              <span style="margin: 0 5px"> - </span>-->
+<!--              <input type="number" placeholder="价格" v-model="max">-->
+<!--              <y-button text="确定" classStyle="main-btn" @btnClick="reset" style="margin-left: 10px;"></y-button>-->
+<!--            </div>-->
+          </div>
+        </div>
 
     <div
       v-loading="loading"
@@ -224,6 +224,10 @@ export default {
 @import "../../assets/style/mixin";
 @import "../../assets/style/theme";
 
+.goods {
+  display: flex;
+  flex-direction: column;
+}
 .nav {
   height: 60px;
   line-height: 60px;

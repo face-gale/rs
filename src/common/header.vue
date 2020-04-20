@@ -1,5 +1,5 @@
 <template>
-  <div class="header-box">
+  <div id="headerA" class="header-box">
     <div>
       <!--<header class="w">
         <div class="w-box">
@@ -14,7 +14,7 @@
         <div class="nav-sub" :class="{ fixed: st }">
           <div class="nav-logo">
             <h1 @click="changePage(-1)">
-              <router-link to="/" title="RS">RS</router-link>
+              <router-link to="/" title="睿思智能科技有限公司官方网">RS</router-link>
             </h1>
           </div>
           <div class="nav-sub-bg"></div>
@@ -27,15 +27,15 @@
                   </router-link
                   >
                 </li>
-                <li>
-                  <a @click="changGoods(-2)" :class="{ active: choosePage === -2 }">全部</a>
-                </li>
+                <!--<li>
+                  <a @click="changGoods(-2)" :class="{ active: choosePage === -2 }">产品中心</a>
+                </li>-->
                 <li v-for="(item, i) in navList" :key="i">
                   <a @click="changGoods(i, item)" :class="{ active: i === choosePage }">{{ item.picUrl }}</a>
                 </li>
-                <li>
-                  <a @click="changGoods(-3)" :class="{ active: choosePage === -3 }">服务与支持</a>
-                </li>
+<!--                <li>-->
+<!--                  <a @click="changGoods(-3)" :class="{ active: choosePage === -3 }">关于我们</a>-->
+<!--                </li>-->
               </ul>
               <div></div>
             </div>
@@ -78,13 +78,14 @@ export default {
         this.$router.push({
           path: "/"
         });
+        // document.querySelector('#headerA').scrollIntoView(true);
       } else if (v === -2) {
         this.$router.push({
           path: "/item"
         });
       } else if (v === -3) {
         //使用document.querySelector实现锚点的效果
-        document.querySelector('#footerA').scrollIntoView(true);
+        // document.querySelector('#footerA').scrollIntoView(true);
       } else {
         // 站内跳转
         if (item.type === 1) {
@@ -98,10 +99,10 @@ export default {
     // 控制顶部
     navFixed() {
       if (
-        this.$route.path === "/goods" ||
+        this.$route.path === "/item" ||
         this.$route.path === "/home" ||
-        this.$route.path === "/goodsDetails" ||
-        this.$route.path === "/thanks"
+        this.$route.path === "/details" ||
+        this.$route.path === "/"
       ) {
         var st = document.documentElement.scrollTop || document.body.scrollTop;
         st >= 100 ? (this.st = true) : (this.st = false);
@@ -383,7 +384,7 @@ header {
     li {
       position: relative;
       float: left;
-      padding-left: 2px;
+      padding-left: 40px;
       a {
         display: block;
         padding: 0 10px;
