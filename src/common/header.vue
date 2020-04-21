@@ -150,10 +150,10 @@ export default {
       } else {
         this.INIT_BUYCART()
       }*/
-    this.navFixed();
+    // this.navFixed();
     this.getPage();
-    window.addEventListener("scroll", this.navFixed);
-    window.addEventListener("resize", this.navFixed);
+    // window.addEventListener("scroll", this.navFixed);
+    // window.addEventListener("resize", this.navFixed);
     if (typeof this.$route.query.key !== undefined) {
       this.input = this.$route.query.key;
     }
@@ -370,10 +370,12 @@ header {
     justify-content: space-between;
   }
   .nav-list2 {
-    height: 28px;
-    line-height: 28px;
+    list-style-type: none;
+    height: 40px;
+    line-height: 40px;
     display: flex;
     align-items: center;
+    font-size: 16px;
     height: 100%;
     li:first-child {
       padding-left: 0;
