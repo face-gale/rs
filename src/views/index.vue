@@ -14,7 +14,7 @@
   </div>
 </template>
 <script>
-import YHeader from "../common/header";
+import YHeader from "../common/AHeader";
 import YFooter from "../common/footer";
 // import { mapState } from 'vuex'
 export default {

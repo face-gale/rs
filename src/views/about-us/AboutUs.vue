@@ -168,6 +168,7 @@
                 background-color: #f9fafc;
                 .bg-col {
                     width: 120px;
+                    background: url(../../assets/images/circle.png) no-repeat right center;
                 }
                 .col-content {
                     height: 40px;

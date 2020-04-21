@@ -12,24 +12,24 @@
         <div class="nav-list">
             <div class="nav-row">
                 <el-row type="flex" class="row-bg" justify="center">
-                    <el-col :span="6">
-                        <div class="bg-col">
+                    <el-col :span="6" class="bg-col">
+                        <div class="col-content">
                             <a>门铃解决方案</a>
                         </div>
                     </el-col>
-                    <el-col :span="6">
-                        <div class="bg-col">
+                    <el-col :span="6" class="bg-col">
+                        <div class="col-content">
                             <a>摄像头解决方案</a>
                         </div>
                     </el-col>
-                    <el-col :span="6">
-                        <div class="bg-col">
+                    <el-col :span="6" class="bg-col">
+                        <div class="col-content">
                             <a>摄像头解决方案</a>
                         </div>
                     </el-col>
-                    <el-col :span="6">
-                        <div class="bg-col">
-                            <a>门锁头解决方案</a>
+                    <el-col :span="6" class="bg-col">
+                        <div class="col-content">
+                            <a>门锁解决方案</a>
                         </div>
                     </el-col>
                 </el-row>
@@ -133,7 +133,7 @@
         flex-direction: column;
     }
     .nav-list {
-        background-color: #f9fafc;
+        background-color: #f6f6f6;
         .nav-row {
             margin: 0 20px;
             .el-row {
@@ -160,8 +160,11 @@
             }
             .row-bg {
                 padding: 10px 0;
-                background-color: #f9fafc;
                 .bg-col {
+                    width: 150px;
+                    background: url(../../assets/images/circle.png) no-repeat right center;
+                }
+                .col-content {
                     height: 40px;
                     line-height: 40px;
                     text-align: center;
