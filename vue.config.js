@@ -12,10 +12,10 @@ module.exports = {
     proxy: {
       // changeOrigin:true,//允许跨域
         '/member/*': {
-            target: 'http://manage.rsmarttech.com/',  // 请求本地 需要xboot后台项目
+            target: 'http://manage.rsmartkesta.com/',  // 请求本地 需要xboot后台项目
         },
         '/goods/*': {
-            target: 'http://manage.rsmarttech.com/'
+            target: 'http://manage.rsmartkesta.com/'
         }
       //   '/member/*': {
       //       target: 'http://127.0.0.1:8080',  // 请求本地 需要xboot后台项目

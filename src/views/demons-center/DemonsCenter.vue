@@ -8,6 +8,7 @@
                            :options="playerOptions"
             ></video-player>
         </div>
+        <div class="main-bottom"></div>
     </div>
 </template>
 
@@ -25,8 +26,8 @@
                     aspectRatio: '16:9', // 将播放器置于流畅模式，并在计算播放器的动态大小时使用该值。值应该代表一个比例 - 用冒号分隔的两个数字（例如"16:9"或"4:3"）
                     fluid: true, // 当true时，Video.js player将拥有流体大小。换句话说，它将按比例缩放以适应其容器。
                     sources: [{
-                        type: "video/mp4",//这里的种类支持很多种：基本视频格式、直播、流媒体等，具体可以参看git网址项目
-                        src: "http://www.rsmarttech.com/video/190204084208765161.mp4" //url地址
+                        type: "",//这里的种类支持很多种：基本视频格式、直播、流媒体等，具体可以参看git网址项目
+                        src: "" //url地址
                     }],
                     // poster: "../../static/images/test.jpg", //你的封面地址
                     // width: document.documentElement.clientWidth, //播放器宽度
@@ -41,12 +42,18 @@
             };
         },
         methods: {
+            getUrl(){
+                this.playerOptions.sources = [{
+                    type: "video/mp4",//这里的种类支持很多种：基本视频格式、直播、流媒体等，具体可以参看git网址项目
+                    src: "http://www.rsmarttech.com/video/video.mp4" //url地址
+                }]
+            }
 
         },
         watch: {
         },
         created() {
-
+            this.getUrl()
         },
         mounted() {
 
@@ -60,7 +67,7 @@
     /*@import "../../assets/player-h5/css/hivideo.css";*/
     .demons {
         .main-top {
-            margin-top: 50px;
+            margin-top: 80px;
         }
         .main-wrap{
             margin: 0 auto;
@@ -69,6 +76,9 @@
             video{
                 width: 100%;
             }
+        }
+        .main-bottom {
+            margin-top: 60px;
         }
     }
 </style>

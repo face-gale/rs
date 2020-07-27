@@ -15,7 +15,7 @@
 </template>
 <script>
 import YHeader from "../common/AHeader";
-import YFooter from "../common/footer";
+import YFooter from "../common/AFooter";
 // import { mapState } from 'vuex'
 export default {
   data() {
@@ -54,6 +54,13 @@ export default {
                 })
             }*/
   },
+   // watch: {
+   //      // 跳转新页面后回到顶部
+   //     '$route': function(to,from){
+   //         document.body.scrollTop = 0
+   //         document.documentElement.scrollTop = 0
+   //     }
+   // },
   components: {
     YHeader,
     YFooter

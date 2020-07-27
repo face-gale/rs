@@ -2,6 +2,10 @@ import Vue from "vue";
 import 'element-ui/lib/theme-chalk/index.css'
 import App from "./App.vue";
 import router from "./router";
+// vue跳转新页面后回到顶部
+router.afterEach((to,from,next)=>{
+  window,scrollTo(0,0)
+})
 import store from "./store";
 
 // 视频播放器

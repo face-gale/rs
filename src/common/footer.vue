@@ -3,7 +3,7 @@
     <div class="container">
       <div class="siteinfo">
         <ul class="c0">
-          <h3 class="c1">产品服务</h3>
+          <h3 class="c1">产品中心</h3>
           <ul>
             <li class="c2">
               <!--              <router-link to="/thanks">-->
@@ -15,32 +15,8 @@
             <li class="c2"><a class="c3" @click="open5">产品声明</a></li>
           </ul>
         </ul>
-        <!--        <ul class="c0">-->
-        <!--          <h3 class="c1">服务支持</h3>-->
-        <!--          <ul>-->
-        <!--            <li class="c2"><a class="c3" target="_blank" href="https://github.com/Exrick">官方开源</a></li>-->
-        <!--            <li class="c2"><a class="c3" target="_blank" href="https://github.com/Exrick/xmall-front">项目前端</a></li>-->
-        <!--            <li class="c2"><a class="c3" target="_blank" href="https://github.com/Exrick/xmall">项目后端</a></li>-->
-        <!--          </ul>-->
-        <!--        </ul>-->
-        <!--        <ul class="c0">-->
-        <!--          <h3 class="c1">自助服务</h3>-->
-        <!--          <ul>-->
-        <!--            <li class="c2"><a class="c3" target="_blank" href="http://blog.exrick.cn">个人博客</a></li>-->
-        <!--            <li class="c2"><a class="c3" target="_blank" href="http://blog.exrick.cn/intro/">个人简介</a></li>-->
-        <!--            <li class="c2"><a class="c3" target="_blank" href="https://www.bilibili.com/video/av15860053/">个人视频</a></li>-->
-        <!--          </ul>-->
-        <!--        </ul>-->
-        <!--        <ul class="c0">-->
-        <!--          <h3 class="c1">其他项目</h3>-->
-        <!--          <ul>-->
-        <!--            <li class="c2"><a class="c3" target="_blank" href="http://xpay.exrick.cn">XPay支付系统</a></li>-->
-        <!--            <li class="c2"><a class="c3" target="_blank" href="http://shouji.baidu.com/software/11783429.html">数据共享</a></li>-->
-        <!--            <li class="c2"><a class="c3" target="_blank" href="https://github.com/Exrick">待开发...</a></li>-->
-        <!--          </ul>-->
-        <!--        </ul>-->
         <ul class="c0">
-          <h3 class="c1">友情链接</h3>
+          <h3 class="c1">方案中心</h3>
           <ul>
             <!--            <li class="c2"><a class="c3" target="_blank" href="http://yucccc.com/">宇cccc</a></li>-->
             <li class="c2">
@@ -200,21 +176,22 @@ export default {
 }
 
 .c0 {
-  width: 149px;
+  width: 180px;
   line-height: 1;
   float: left;
+  text-align: center;
 }
 
 .c1 {
   color: #646464;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 16px;
   padding: 0 0 20px;
 }
 
 .c2 {
   color: #c3c3c3;
-  font-size: 12px;
+  font-size: 14px;
   padding: 6px 0;
 }
 

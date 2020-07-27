@@ -348,7 +348,9 @@ export default {
 .img1 {
   display: block;
   position: absolute;
-  width: 100%;
+  width: 40%;
+  left:50%;
+  margin-left: -20%;
   height: 100%;
   top: 0;
   border-radius: 10px;
